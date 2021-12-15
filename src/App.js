@@ -1,11 +1,25 @@
-import logo from './logo.svg';
+
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from "react-router-dom";
+import Join from "./component/Join/Join";
+import Chat from "./component/Chat/Chat"
 
 function App() {
+
   return (
-    <div className="App">
-    <h1>hlw world</h1>
-    </div>
+
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Join />} />
+        <Route path="/chat" element={<Chat />} />
+
+      </Routes>
+    </Router>
+
   );
 }
 
